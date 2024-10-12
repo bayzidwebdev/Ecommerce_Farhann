@@ -1,0 +1,35 @@
+/* Laptop screen  */
+@media only screen and (max-width:991px){
+    .container{
+        max-width: 900px !important;
+    }
+    .pr-d{
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width:889px){
+    .banner-text,
+    .wacth-banner-text,
+    .category-shop-banner-text{
+        left: 12px !important;
+    }
+}
+/* mobile screen  */
+@media only screen and (max-width:767px){
+    .menu-name{
+        margin-top: 50px;
+    }
+    .prev-next{
+        display: none;
+    }
+}
+@media only screen and (min-width:768px){
+    .discover-text{
+        text-align: left;
+    }
+    .prev-next{
+        display: block;
+    }
+}
+@media only screen and (max-width:545px){
+}

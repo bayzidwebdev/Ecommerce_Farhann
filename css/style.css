@@ -1,0 +1,674 @@
+/* css for all body  */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 
+============================>
+all reusable content css start here 
+============================>
+*/
+body{
+    background: #000;
+    color: #fff;
+    font-family: "Azeret Mono", monospace;
+    font-size: 14px;
+}
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+br,
+ul,
+li{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-17{
+    font-size: 17px;
+}
+/* 
+============================>
+all reusable content css end here 
+============================>
+*/
+
+
+/* 
+============================>
+hover style css start here 
+============================>
+*/
+.letter-spacing-hover{
+    margin: 0px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: 0.2s all ease-in-out;
+    padding: 5px 0;
+}
+.letter-spacing-hover:hover{
+    letter-spacing: 2px;
+}
+/* 
+============================>
+hover style css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+header css start here 
+============================>
+*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 999 !important;
+}
+.bottom-header{
+    margin-top: 0;
+    transition: all 0.3s ease;
+}
+.bottom-header.dynamic{
+    margin-top: -30px !important;
+    transition: margin-top 0.3s ease-in-out;
+}
+.top-header{
+    background: #000;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.hide-header {
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.top-header p{
+    padding: 10px 0;
+}
+.bottom-header{
+    margin-top: 10px;
+    background: #fffffff2;
+    border-radius: 5px;
+    padding: 0 10px;
+    z-index: 99999999;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: -120%;
+    transition: all 0.3s ease;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+.overlay.show-modal{
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar{
+    padding: 0;
+}
+.login-icon i, .cart-icon i{
+    font-size: 20px;
+}
+.cart-icon {
+    position: relative;
+}
+.cart-amount{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    background-color: rgb(133,77,255);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+.cart-amount.visible{
+    display: flex;
+}
+.login-text{
+    letter-spacing: 1.1px;
+}
+.login-text p:hover{
+    color: #8c9091 !important;
+}
+.active{
+    text-decoration: underline;
+}
+.menu nav ul li a:hover{
+    text-decoration: underline;
+}
+.menu-icon{
+    display: none;
+}
+.mobile-menue{
+
+}
+.mobile-menue .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.menu-close-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.mobile-nav li a{
+    font-size: 30px !important;
+}
+@media only screen and (max-width:991px){
+    .bottom-header{
+        padding: 8px 10px;
+       width: 90%;
+    }
+    .menu-icon{
+        display: block;
+        margin: auto;
+        outline: none;
+        font-size: 20px;
+        border: none;
+        background: none;
+    }
+    .menu-icon:hover{
+        color: rgb(133,77,255);
+    }
+    .login-cart ul li:nth-child(1){
+        display: none;   
+    }
+    .mobile-nav li a.active{
+        color: rgb(133,77,255);
+        text-decoration: none;
+    }
+    .mobile-nav .login{
+        margin-bottom: 20px;
+    }
+    .mobile-nav .login-icon i{
+        font-size: 16px;
+    }
+    .mobile-nav .login-text p{
+        font-size: 16px;
+    } 
+}
+/* 
+============================>
+header css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+banner css start here 
+============================>
+*/
+.banner{
+    width: 100%;
+    min-height: 90vh;
+    background-image: url(../images/main_bg.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.banner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 70%,rgba(0,0,0,1) 100%); 
+
+}
+.ban-container{
+    position: relative;
+    min-height: 90vh;
+}
+.banner-text{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+.shop-now{
+    padding-bottom: 80px;
+}
+/* 
+============================>
+banner css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+product css start here 
+============================>
+*/
+.product-img{
+    overflow: hidden;
+    border-radius: 5px;
+}
+.product-img img{
+    transition: 0.3s all ease;
+    width: 100%;
+}
+.product-img img:hover{
+    transform: scale(1.1);
+}
+/* 
+============================>
+product css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+wacth banner css start here 
+============================>
+*/
+.wacth-banner{
+    margin-top: 80px;
+}
+.ban-wacth-container{
+    position: relative;
+    min-height: 90vh;
+    padding: 0 40px;
+    background-image: url(../images/Bg_2.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+.ban-wacth-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 70%,rgba(0,0,0,1) 100%); 
+    left: 0;
+    bottom: 0;
+}
+.wacth-banner-text{
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+}
+/* 
+============================>
+wacth banner css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+category-shop css start here 
+============================>
+*/
+.category-shop{
+    margin-bottom: 80px;
+}
+.category-shop-container{
+    position: relative;
+    min-height: 90vh;
+    padding: 0 40px;
+    background-image: url(../images/Category_BG.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+.category-shop-container::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 2%,rgba(0,0,0,0) 70%,rgba(0,0,0,1) 100%); 
+    left: 0;
+    bottom: 0;
+}
+.category-shop-banner-text{
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.btn-cat{
+    padding: 12px 20px;
+    background: #00000057; 
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 400 !important;
+}
+.btn-cat:hover{
+    background: #000000e7;
+}
+/* 
+============================>
+category-shop css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+subsribe-form css start here 
+============================>
+*/
+.subscribe{
+    padding-bottom: 120px;
+}
+.subsribe-form{
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.subsribe-form input[type="email"]{
+    width: 100%;
+    background: none;
+    border-radius: 0px;
+    border: 1px solid #f9f9f9ab;
+    padding: 8px 20px;
+    margin-top: 10px;
+    color: #fff;
+    outline: none;
+}
+.subsribe-form input[type="email"]:hover, .subsribe-form input[type="email"]:focus{
+    border-color: #fff;
+    border-radius: 0px;
+    outline: none;
+}
+.check-submit{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.check-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 10px;
+}
+.check-box input[type="checkbox"]{
+    border: 1px solid #fff;
+    background: none;
+    border-radius: 0px;
+    margin-right: 10px;
+}
+.submit{
+    width: 80%;
+}
+.submit input[type="submit"]{
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    background: none;
+    outline: none;
+    color: #fff;
+    transition: 0.3s all ease;
+}
+.submit input[type="submit"]:hover{
+    background: rgb(133,77,255);
+    border-color: rgb(133,77,255);
+    color: #000;
+}
+/* 
+============================>
+subsribe-form css end here 
+============================>
+*/
+
+
+/* 
+============================>
+footer css start here 
+============================>
+*/
+footer{
+    background: rgb(133,77,255);
+    padding: 40px 0;
+    text-transform: uppercase;
+}
+.footer-btn{
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.3s all ease;
+}
+.footer-btn:hover{
+    border-color: #fff;
+    background: #fff;
+    color: #000;
+}
+.copyright{
+    padding-top: 30px;
+}
+/* 
+============================>
+footer css end here 
+============================>
+*/
+
+
+
+
+/* 
+============================>
+single product page css start here 
+============================>
+*/
+.product-page-header{
+    margin: 20px 0;
+}
+.product-page-header .bottom-header{
+    background: none !important;
+    border: 1px solid #fff;
+    color: #fff !important;
+}
+.product-page-header .bottom-header a, .product-page-header .bottom-header p, .product-page-header .bottom-header i{
+    color: #fff !important;
+}
+.product-details{
+    margin: 100px 0;
+}   
+.prev-text{
+    color: #8c9091;
+}
+.next-text{
+    color: #fff;
+}
+.product-details-show{
+    margin-top: 40px;
+}
+
+ /* Styling for the quantity wrapper */
+ .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    width: 130px;
+    margin-top: 5px;
+  }
+
+  /* Styling for the input field */
+  .quantity-input {
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    background: none;
+    outline: none;
+    color: #fff;
+    border: none;
+   }
+    input[type="number"]::-webkit-inner-spin-button, 
+    input[type="number"]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0; 
+}
+
+  /* Styling for the buttons */
+  .quantity-btn {
+    width: 40px;
+    height: 40px;
+    background: none;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quantity-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+
+  /* Add hover effects for buttons */
+  .quantity-btn:hover:not(:disabled) {
+    background: none;
+    color: #fff;
+  }
+  .pr-cart-buy{
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  .cart-btn, .buy-btn{
+    width: 49%;
+  }
+  .cart-btn{
+    background: none;
+    color: #fff;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.3s all ease;
+  }
+  .cart-btn:hover{
+    background: rgb(133,77,255);
+    border-color: rgb(133,77,255);
+  }
+  .buy-btn{
+    background: #fff;
+    color: #000;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.3s all ease;
+  }
+  .buy-btn:hover{
+    background: none;
+    color: #fff;
+    padding: 10px 0;
+    border: 1px solid #fff;
+  }
+
+  /* accordion css  */
+  .accordion{
+    margin-top: 20px;
+  }
+  .accordion-item{
+    border: none;
+    border-bottom: 1px solid #8c9091;
+    padding: 5px 0;
+    background: none;
+  }
+  .accordion-header{
+    outline: none !important;
+    border: none;
+  }
+  .accordion-button{
+    background: #000 !important;
+    color: #fff !important;
+    outline: none !important;
+    border: none;
+    box-shadow: none !important;
+  }
+  .accordion-button:focus{
+    box-shadow: none;
+    background: #000 !important;
+    color: #fff !important;
+    outline: none !important;
+    border: none;
+  }
+  .accordion-button:not(:focus){
+    border: none;
+  }
+  .accordion-button.collapsed{
+    border-bottom: none !important;
+    box-shadow: none !important;
+  }
+  .accordion-body{
+    background: #000 !important;
+    color: #fff;
+    border: none;
+  }
+  .accordion-item:last-of-type{
+    border-radius: 0px !important;
+  }
+  .accordion-item:first-of-type>.accordion-header .accordion-button{
+    border: none !important;
+    border-radius: 0px !important;
+  }
+  .social-icon a{
+    margin-right: 10px;
+    transition: 0.3s all ease;
+  }
+  .social-icon a:hover{
+    color: #8c9091;
+  }
+/* 
+============================>
+single product page css end here 
+============================>
+*/
+
+
